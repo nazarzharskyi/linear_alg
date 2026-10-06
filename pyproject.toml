@@ -1,0 +1,21 @@
+[project]
+name = "incorrect-data-processing-practice"
+version = "2025.1"
+description = "Practical homework for the course Incorrect Data Processing Problems"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "numpy==2.5.3",
+    "scipy==1.18.1",
+    "scikit-learn==1.9.1",
+    "sympy==1.14.0",
+    "matplotlib==3.11.2",
+    "pytest==9.1.1",
+    "jupyterlab==4.5.2",
+    "ipykernel==7.3.0",
+]
+
+[tool.pytest.ini_options]
+# Lets `pytest` find vectors.py, matrices.py, ... without setting PYTHONPATH.
+pythonpath = ["."]
+testpaths = ["tests"]
+filterwarnings = ["error::FutureWarning", "error::DeprecationWarning"]
